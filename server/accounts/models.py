@@ -53,3 +53,22 @@ class StudentProfile(models.Model):
 
     def __str__(self):
         return f"{self.name} ({self.user.email})"
+
+class Alumni(models.Model):
+    user = models.OneToOneField(UserAccount, on_delete=models.CASCADE, related_name='alumni')
+    name = models.CharField(max_length=255)
+    graduation_year = models.PositiveIntegerField()
+    branch = models.CharField(max_length=100)
+    current_designation = models.CharField(max_length=255)
+    company = models.CharField(max_length=255)
+    skills = models.TextField(help_text='Comma-separated list of skills')
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'Alumni'
+        verbose_name_plural = 'Alumni'
+        ordering = ['-graduation_year']
+
+    def __str__(self):
+        return f"{self.name} - {self.graduation_year} ({self.branch})"

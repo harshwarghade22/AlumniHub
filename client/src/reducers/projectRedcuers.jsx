@@ -1,5 +1,5 @@
 import { PROFILE_FETCH_FAIL, PROFILE_FETCH_REQUEST, PROFILE_FETCH_SUCCESS, PROFILE_RESET } from "../constants/profileConstants";
-import { GET_USERDETAIL_FAIL, GET_USERDETAIL_REQUEST, GET_USERDETAIL_SUCCESS, LOGIN_PROJECT_FAIL, LOGIN_PROJECT_REQUEST, LOGIN_PROJECT_SUCCESS, LOGOUT_PROJECT, PROFILE_CREATE_FAIL, PROFILE_CREATE_REQUEST, PROFILE_CREATE_SUCCESS, SIGNUP_PROJECT_FAIL, SIGNUP_PROJECT_REQUEST, SIGNUP_PROJECT_SUCCESS } from "../constants/projectConstants";
+import { GET_ALUMNI_FAIL, GET_ALUMNI_REQUEST, GET_ALUMNI_SUCCESS, GET_USERDETAIL_FAIL, GET_USERDETAIL_REQUEST, GET_USERDETAIL_SUCCESS, LOGIN_PROJECT_FAIL, LOGIN_PROJECT_REQUEST, LOGIN_PROJECT_SUCCESS, LOGOUT_PROJECT, PROFILE_CREATE_FAIL, PROFILE_CREATE_REQUEST, PROFILE_CREATE_SUCCESS, SIGNUP_PROJECT_FAIL, SIGNUP_PROJECT_REQUEST, SIGNUP_PROJECT_SUCCESS } from "../constants/projectConstants";
 
 const initialState = {
     loading: false,
@@ -110,6 +110,25 @@ export const profileCreateReducer = (state = initialState3, action) => {
       return { ...state, loading: false, error: action.payload };
     case PROFILE_RESET:
       return initialState3;
+    default:
+      return state;
+  }
+};
+
+const initialAlumniState = {
+  loading: false,
+  alumni: [],
+  error: null,
+};
+
+export const alumniListReducer = (state = initialAlumniState, action) => {
+  switch (action.type) {
+    case GET_ALUMNI_REQUEST:
+      return { ...state, loading: true };
+    case GET_ALUMNI_SUCCESS:
+      return { loading: false, alumni: action.payload };
+    case GET_ALUMNI_FAIL:
+      return { loading: false, error: action.payload };
     default:
       return state;
   }

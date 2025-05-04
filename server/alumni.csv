@@ -1,0 +1,24 @@
+name,graduation_year,branch,current_designation,company,skills,email
+Abhishek Sharma,2015,Computer,Data Scientist,Google,"Machine Learning, Python, Data Analysis",abhishek@gmail.com
+Aditi Singh,2012,Electrical,Senior Engineer,GE Power,"Control Systems, Power Electronics, MATLAB",aditi@gmail.com
+Akash Gupta,2013,Mechanical,Project Manager,Tata Motors,"Project Management, SolidWorks, AutoCAD",akash@gmail.com
+Anjali Kadam,2010,Computer,UX Designer,Microsoft,"User Experience Design, Adobe Creative Suite",anjali@gmail.com
+Avinash Singh,2008,Electronics,Senior Manager,Intel,"FPGA Design, Verilog, SystemVerilog",avinash@gmail.com
+Bhavna Shah,2005,Chemical,Senior Scientist,Johnson & Johnson,"Chemical Engineering, Research, Biotechnology",bhavna@gmail.com
+Deepak Gupta,2011,Civil,Project Manager,L&T,"Project Management, AutoCAD, Project Planning",deepak@gmail.com
+Divya Sharma,2016,Computer,Software Engineer,Amazon,"Java, Spring Boot, AWS, SQL",divya@gmail.com
+Gaurav Singh,2009,Electronics,Technical Lead,Qualcomm,"Embedded Systems, C, ARM",gaurav@gmail.com
+Hitesh Patel,2014,Mechanical,Design Engineer,BMW,"CATIA, ANSYS, GD&T",hitesh@gmail.com
+Jyoti Patel,2007,Computer,Senior Developer,Oracle,"Java, SQL, REST APIs, JavaScript",jyoti@gmail.com
+Kavita Desai,2018,Electrical,Power Engineer,Schneider Electric,"Power Systems, MATLAB, PLC Programming",kavita@gmail.com
+Kiran Rao,2013,Computer,Data Analyst,IBM,"SQL, Python, Tableau, Data Analysis",kiran@gmail.com
+Kritika Sharma,2017,Mechanical,Operations Manager,Ford,"Supply Chain Management, Project Management, SAP",kritika@gmail.com
+Kuldeep Singh,2006,Electronics,Senior Engineer,Texas Instruments,"Analog Design, Cadence, Matlab",kuldeep@gmail.com
+Lata Gupta,2010,Computer,Software Architect,Salesforce,"Java, AWS, Spring Framework, Microservices",lata@gmail.com
+Madhuri Nair,2015,Chemical,Process Engineer,Dow Chemical,"Chemical Engineering, Process Design, Aspen Plus",madhuri@gmail.com
+Mahesh Patel,2009,Computer,Technical Architect,Infosys,"Java, Cloud Computing, Microservices, Spring Boot",mahesh@gmail.com
+Manish Joshi,2004,Electrical,Principal Engineer,Honeywell,"Power Electronics, Motor Control, MATLAB",manish@gmail.com
+Manoj Kumar,2006,Mechanical,General Manager,Tata Steel,"Steel Production, Operations Management, Six Sigma",manoj@gmail.com
+Mansi Desai,2019,Computer,Software Developer,Google,"Python, React, JavaScript, Data Structures",mansi@gmail.com
+Meenakshi Iyer,2009,Electronics,Technical Lead,Wipro,"Embedded Systems, C, Linux",meenakshi@gmail.com
+Megha Singh,2016,Chemical,Research Scientist,Dupont,"Polymer Chemistry, Materials Science, Research",megha@gmail.com

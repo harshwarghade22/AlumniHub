@@ -4,9 +4,8 @@ from rest_framework.permissions import AllowAny,IsAuthenticated,IsAdminUser
 from rest_framework.response import Response
 from django.contrib.auth import get_user_model
 from rest_framework.views import APIView
-from .serializers import UserSerializer
-from .models import StudentProfile
-from .serializers import StudentProfileSerializer
+from .serializers import UserSerializer, StudentProfileSerializer, AlumniSerializer
+from .models import StudentProfile, Alumni
 from rest_framework import status
 
 User = get_user_model()
@@ -118,6 +117,27 @@ class AlumniRecommendationView(APIView):
         # For now, just branch match
         serializer = StudentProfileSerializer(alumni, many=True)
         return Response(serializer.data)
+
+class AlumniListView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        alumni = Alumni.objects.all()
+        serializer = AlumniSerializer(alumni, many=True)
+        return Response(serializer.data)
+    
+    def post(self, request):
+        # Check if user already has an alumni profile
+        if Alumni.objects.filter(user=request.user).exists():
+            return Response({'error': 'Alumni profile already exists'}, status=400)
+        
+        data = request.data.copy()
+        data['user'] = request.user.id
+        serializer = AlumniSerializer(data=data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=201)
+        return Response(serializer.errors, status=400)
 
 
 

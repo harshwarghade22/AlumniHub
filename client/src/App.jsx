@@ -9,6 +9,7 @@ import './App.css';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 import CreateProfile from './components/CreateProfile';
+import Alumni from './components/Alumni';
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -24,7 +25,7 @@ function App() {
             <Route path="/signup" element={<SignUp />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/profile" element={<CreateProfile />} />
-            {/* Add more routes as needed */}
+            <Route path="/alumni" element={<Alumni />} />
           </Routes>
         </main>
       </div>

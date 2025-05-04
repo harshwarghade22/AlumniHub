@@ -16,7 +16,8 @@ import {
   Bell,
   ChevronDown,
   Menu,
-  X
+  X,
+  GraduationCap
 } from 'lucide-react';
 
 const Navbar = ({ isOpen, setIsOpen }) => {
@@ -205,6 +206,14 @@ const Navbar = ({ isOpen, setIsOpen }) => {
             >
               <LayoutDashboard size={20} className={isOpen ? 'mr-3' : 'mx-auto'} />
               {isOpen && <span className="font-medium">Dashboard</span>}
+            </Link>
+            
+            <Link 
+              to="/alumni" 
+              className={`flex items-center px-3 py-3 mb-1 rounded-lg ${isActive('/alumni')}`}
+            >
+              <GraduationCap size={20} className={isOpen ? 'mr-3' : 'mx-auto'} />
+              {isOpen && <span className="font-medium">Alumni</span>}
             </Link>
             
             <Link 
