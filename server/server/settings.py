@@ -94,11 +94,11 @@ AUTHENTICATION_BACKENDS = (
 )
 
 # LinkedIn credentials
-SOCIAL_AUTH_LINKEDIN_OAUTH2_KEY = '77qj09wet89tk3'
-SOCIAL_AUTH_LINKEDIN_OAUTH2_SECRET = 'WPL_AP1.RyyH0JTjCdSBXD1D.A8vdxw=='
-SOCIAL_AUTH_LINKEDIN_OAUTH2_SCOPE = ['r_liteprofile', 'r_emailaddress']
-SOCIAL_AUTH_LINKEDIN_OAUTH2_FIELD_SELECTORS = ['id', 'firstName', 'lastName', 'emailAddress']
-SOCIAL_AUTH_LINKEDIN_OAUTH2_EXTRA_DATA = [('id', 'id'), ('firstName', 'first_name'), ('lastName', 'last_name'), ('emailAddress', 'email')]
+# SOCIAL_AUTH_LINKEDIN_OAUTH2_KEY = '77qj09wet89tk3'
+# SOCIAL_AUTH_LINKEDIN_OAUTH2_SECRET = 'WPL_AP1.RyyH0JTjCdSBXD1D.A8vdxw=='
+# SOCIAL_AUTH_LINKEDIN_OAUTH2_SCOPE = ['r_liteprofile', 'r_emailaddress']
+# SOCIAL_AUTH_LINKEDIN_OAUTH2_FIELD_SELECTORS = ['id', 'firstName', 'lastName', 'emailAddress']
+# SOCIAL_AUTH_LINKEDIN_OAUTH2_EXTRA_DATA = [('id', 'id'), ('firstName', 'first_name'), ('lastName', 'last_name'), ('emailAddress', 'email')]
 
 
 # DATABASES = {
