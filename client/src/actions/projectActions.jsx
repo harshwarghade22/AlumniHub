@@ -1,4 +1,4 @@
-import { GET_ALUMNI_FAIL, GET_ALUMNI_REQUEST, GET_ALUMNI_SUCCESS, GET_USERDETAIL_FAIL, GET_USERDETAIL_REQUEST, GET_USERDETAIL_SUCCESS, LOGIN_PROJECT_FAIL, LOGIN_PROJECT_REQUEST, LOGIN_PROJECT_SUCCESS, LOGOUT_PROJECT, PROFILE_CREATE_FAIL, PROFILE_CREATE_REQUEST, PROFILE_CREATE_SUCCESS, SIGNUP_PROJECT_FAIL, SIGNUP_PROJECT_REQUEST, SIGNUP_PROJECT_SUCCESS } from "../constants/projectConstants";
+import { GET_ALUMNI_FAIL, GET_ALUMNI_REQUEST, GET_ALUMNI_SUCCESS, GET_USERDETAIL_FAIL, GET_USERDETAIL_REQUEST, GET_USERDETAIL_SUCCESS, LOGIN_PROJECT_FAIL, LOGIN_PROJECT_REQUEST, LOGIN_PROJECT_SUCCESS, LOGOUT_PROJECT, PROFILE_CREATE_FAIL, PROFILE_CREATE_REQUEST, PROFILE_CREATE_SUCCESS, SIGNUP_PROJECT_FAIL, SIGNUP_PROJECT_REQUEST, SIGNUP_PROJECT_SUCCESS, GET_ALUMNI_RECOMMENDATIONS_FAIL, GET_ALUMNI_RECOMMENDATIONS_REQUEST, GET_ALUMNI_RECOMMENDATIONS_SUCCESS } from "../constants/projectConstants";
 import { PROFILE_RESET } from "../constants/profileConstants";
 
 import axios from "axios";
@@ -150,6 +150,37 @@ export const getAlumniList = () => async (dispatch, getState) => {
   } catch (error) {
     dispatch({
       type: GET_ALUMNI_FAIL,
+      payload:
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message,
+    });
+  }
+};
+
+export const getAlumniRecommendations = () => async (dispatch, getState) => {
+  try {
+    dispatch({ type: GET_ALUMNI_RECOMMENDATIONS_REQUEST });
+
+    const {
+      userLogin: { userInfo },
+    } = getState();
+
+    const config = {
+      headers: {
+        Authorization: `Bearer ${userInfo.access}`,
+      },
+    };
+
+    const { data } = await axios.get('http://127.0.0.1:8000/api/accounts/alumni/recommend/', config);
+    
+    dispatch({
+      type: GET_ALUMNI_RECOMMENDATIONS_SUCCESS,
+      payload: data,
+    });
+  } catch (error) {
+    dispatch({
+      type: GET_ALUMNI_RECOMMENDATIONS_FAIL,
       payload:
         error.response && error.response.data.message
           ? error.response.data.message

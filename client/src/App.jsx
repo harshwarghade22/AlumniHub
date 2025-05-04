@@ -10,6 +10,7 @@ import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 import CreateProfile from './components/CreateProfile';
 import Alumni from './components/Alumni';
+import AlumniRecommendations from './components/AlumniRecommendations';
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -26,6 +27,7 @@ function App() {
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/profile" element={<CreateProfile />} />
             <Route path="/alumni" element={<Alumni />} />
+            <Route path="/recommendations" element={<AlumniRecommendations />} />
           </Routes>
         </main>
       </div>

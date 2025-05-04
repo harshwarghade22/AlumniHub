@@ -6,7 +6,8 @@ import {
   profileCreateReducer, 
   signupProjectReducers, 
   userDetailReducers,
-  alumniListReducer 
+  alumniListReducer,
+  alumniRecommendationsReducer 
 } from './reducers/projectRedcuers';
 
 const userInfoFromStorage = localStorage.getItem('userInfo')
@@ -19,6 +20,7 @@ const rootReducer = combineReducers({
   userDetails: userDetailReducers,
   profileCreate: profileCreateReducer,
   alumniList: alumniListReducer,
+  alumniRecommendations: alumniRecommendationsReducer,
 });
 
 const initialState = {

@@ -209,7 +209,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
             </Link>
             
             <Link 
-              to="/alumni" 
+              to="/recommendations" 
               className={`flex items-center px-3 py-3 mb-1 rounded-lg ${isActive('/alumni')}`}
             >
               <GraduationCap size={20} className={isOpen ? 'mr-3' : 'mx-auto'} />

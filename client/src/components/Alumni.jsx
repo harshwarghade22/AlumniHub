@@ -30,6 +30,8 @@ const Alumni = () => {
     return matchesSearch && matchesBranch && matchesYear && matchesCompany;
   });
 
+  console.log('Filtered Alumni:', filteredAlumni);
+
   const uniqueBranches = [...new Set(alumni?.map(alum => alum.branch))];
   const uniqueYears = [...new Set(alumni?.map(alum => alum.graduation_year))].sort((a, b) => b - a);
   const uniqueCompanies = [...new Set(alumni?.map(alum => alum.company))];
